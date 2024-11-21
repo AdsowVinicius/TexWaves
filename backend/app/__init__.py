@@ -2,6 +2,9 @@ from flask import Flask
 from app.models import db
 from app.utils.db_config import init_db
 from app.routes import auth_routes, data_routes
+from app import *
+# Agora você pode usar diretamente as funções importadas
+
 
 def create_app():
     app = Flask(__name__)

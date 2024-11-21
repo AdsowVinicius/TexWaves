@@ -1,8 +1,8 @@
 import os
-from audioExtract import extract_audio_from_video
-from CreateVideoWinthSubtitles import create_video_with_subtitles
-from detectPauses import detect_pauses
-from transcribeAudio import transcribe_audio
+from .audioExtract import extract_audio_from_video
+from .CreateVideoWinthSubtitles import create_video_with_subtitles
+from .detectPauses import detect_pauses
+from .transcribeAudio import transcribe_audio
 import os
 import hashlib
 from datetime import datetime
@@ -56,8 +56,3 @@ def generate_str_file_and_video(video_path, backend_directory, name_output):
     print(f"Arquivo .str salvo em: {str_file_path}")
     print(f"Novo vídeo salvo em: {output_video_path}")
     return str_file_path, output_video_path, video_hash
-backend_path = r"C:\Users\adsow\OneDrive\Desktop\TexWaves\backend"
-video_path = r"C:\Users\adsow\OneDrive\Desktop\TexWaves\backend\uploads\VideoTesteMoviePy.mp4"
-output_video_name = "teste1.mp4"
-
-generate_str_file_and_video(video_path, backend_path, output_video_name)
